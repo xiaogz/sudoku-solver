@@ -6,7 +6,7 @@ look for edges cases though.
 
 # Demo
 This demo requires a Linux environment. If on Windows, checkout MSYS2
-[here](https://www.msys2.org/). This demo requires a C++ compiler like gcc or
+[here](https://www.msys2.org/). This demo requires g++ compiler.
 clang.
 
 On a Linux system, run `./compile.sh sudoku-solver.cpp < solver-input[2].txt`.
