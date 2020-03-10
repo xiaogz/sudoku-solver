@@ -21,13 +21,10 @@ int main()
     std::vector<std::vector<char>> board;
     board.resize(9);
 
-    char temp;
-
     for (auto& row : board) {
         row.resize(9);
         for (auto& col : row) {
-            std::cin >> temp;
-            col = temp;
+            std::cin >> col;
         }
     }
 
@@ -38,6 +35,16 @@ int main()
 
     std::cout << "After solving:\n";
     std::cout << board;
+
+    char temp;
+    std::cin >> temp;
+
+    if (std::cin.eof()) {
+        std::cout << "Validation solution was not found.\n";
+        return 0;
+    }
+
+    std::cin.putback(temp);
 
     std::vector<std::vector<char>> test(9, std::vector<char>(9));
     for (auto& row : test) {
